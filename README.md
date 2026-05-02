@@ -35,19 +35,13 @@ playwright install chromium
 
 ### 3. Настроить конфигурацию
 
-Скопируйте файл примера и заполни своими данными:
-
-```bash
-cp config.example.py config.py
-```
-
-Откройте `config.py` и заполни:
+Откройте `config.py` и заполните его вашими данными:
 
 ```python
 USERNAME = "tiktok_username"       # TikTok аккаунт для мониторинга
 TELEGRAM_TOKEN = "ваш_токен"       # Токен от @BotFather
 CHAT_ID = 123456789                # Ваш Telegram ID (узнать у @userinfobot)
-PROXY = None                       # Опционально: "socks5://user:pass@host:port"
+PROXY = None                       # Опционально, для ограниченных регионов(работает только на бота телеграм): "socks5://user:pass@host:port"
 INTERVAL_HOURS = 5                 # Интервал проверки по умолчанию (в часах)
 ```
 
@@ -65,7 +59,6 @@ python tt.py
 tiktok-repost-monitor/
 ├── tt.py                  # Основной скрипт
 ├── config.py              # Ваши настройки
-├── config.example.py      # Пример конфига
 ├── requirements.txt       # Зависимости
 ├── .gitignore             # Исключения для Git
 ├── seen_ids.json          # Авто: ID уже виденных репостов
